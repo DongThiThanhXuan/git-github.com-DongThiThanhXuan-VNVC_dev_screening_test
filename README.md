@@ -1,9 +1,11 @@
 I/ Công nghệ sử dụng
    - Cả client và API đều được viết bằng C# .NET Core 6.
+
     1/ Cấu trúc thư mục:
       - Thư mục API là Server side.
       - Thư mục DemoWinform là chạy client site bằng Winform application.
       - DB là SQLite đi kèm trong thư mục API: SQLite nhẹ và ko cần cài đặt. Khi chạy project thì tạo db theo code. Nếu có sự thay đổi như thêm hoặc sửa trong model thì chạy lại câu lệnh dotnet ef migrations add initialxxx (xxx là version name để phân biệt với các version trước).
+
     2/ Web API:
       - Entity Framework
       - Code first approach (sử dụng code để tạo và update cơ sở dữ liệu).
