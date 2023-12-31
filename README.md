@@ -11,10 +11,14 @@ II/ Hướng dẫn cài đặt và chạy:
   - Mở project API trên Visual Studio, mở file launchSettings.json ở Properties, đổi applicationUrl thành "https://localhost:5001;http://localhost:5000"
 
 III/ Công nghệ sử dụng
+
     1/ Web API:
+    
       - Entity framework
       - SQLite
+      
     2/ Winform App
+    
       - Fluent Validation
       - 
 IV/ Tính năng
