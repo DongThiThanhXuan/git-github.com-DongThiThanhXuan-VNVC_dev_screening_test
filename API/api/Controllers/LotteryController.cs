@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using api.Common;
 using api.Data;
 using api.Helpers;
 using api.Models;
@@ -51,7 +52,7 @@ namespace api.Controllers
                 { /// Update số đặt mới của user
                     lotteryDetail = await _context.LotteryDetails.Where(l => l.AppUserId == user.Id && l.LotteryResultId == activeLotteryResult.Id).FirstOrDefaultAsync();
                     lotteryDetail.Picks = pickNumber;
-                    lotteryDetail.WinFlg = 0;
+                    lotteryDetail.WinFlg = CommonMsg.WAIT_DRAW_STT;
                 }
                 else
                 {
@@ -60,7 +61,7 @@ namespace api.Controllers
                         AppUser = user,
                         LotteryResult = activeLotteryResult,
                         Picks = pickNumber,
-                        WinFlg = 0
+                        WinFlg = CommonMsg.WAIT_DRAW_STT
                     };
                 }
                 _context.LotteryDetails.Update(lotteryDetail);
@@ -79,7 +80,7 @@ namespace api.Controllers
                                                                             WinFlg = x.WinFlg
                                                                         })
                                                                         .ToListAsync();
-                msg.Id = 3;
+                msg.Id = CommonMsg.MSG_SAVE_SUCCESSFULl;
                 var temp = await _context.Messages.FindAsync(msg.Id);
                 msg.MessageContent = temp.MessageContent;
                 result.listLotteryDetails = resultLotteryDetailsUsers;
@@ -89,7 +90,7 @@ namespace api.Controllers
             {
                 Console.WriteLine(ex);
                 result = new ResultLotteryDetails();
-                msg.Id = 5;
+                msg.Id = CommonMsg.MSG_ERROS_EX;
                 var temp = await _context.Messages.FindAsync(msg.Id);
                 msg.MessageContent = temp.MessageContent;
                 result.Msg = msg;
@@ -124,22 +125,20 @@ namespace api.Controllers
 
                 if (resultLotteryDetailsUsers.Count() > 0)
                 {
-                    msg.Id = 3;
+                    msg.Id = CommonMsg.MSG_SAVE_SUCCESSFULl;
 
                   result.listLotteryDetails=  resultLotteryDetailsUsers;
                 }
                 else
                 {
-                    msg.Id = 7;
+                    msg.Id = CommonMsg.MSG_NO_HAS_DATA;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 result = new ResultLotteryDetails();
-                msg.Id = 5;
-
-
+                msg.Id = CommonMsg.MSG_ERROS_EX;
             }
             var temp = await _context.Messages.FindAsync(msg.Id);
             msg.MessageContent = temp.MessageContent;
@@ -171,22 +170,20 @@ namespace api.Controllers
 
                 if (resultLotteryDetailsUsers.Count() > 0)
                 {
-                    msg.Id = 3;
+                    msg.Id = CommonMsg.MSG_SAVE_SUCCESSFULl;
 
                   result.listLotteryDetails=  resultLotteryDetailsUsers;
                 }
                 else
                 {
-                    msg.Id = 7;
+                    msg.Id = CommonMsg.MSG_NO_HAS_DATA;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 result = new ResultLotteryDetails();
-                msg.Id = 5;
-
-
+                msg.Id = CommonMsg.MSG_ERROS_EX;
             }
             var temp = await _context.Messages.FindAsync(msg.Id);
             msg.MessageContent = temp.MessageContent;
