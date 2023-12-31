@@ -25,7 +25,7 @@ IV/ Tính năng
 
     1/ Web API:
   - Có Schedule function chạy tự động đầu mỗi giờ để tạo kết quả xổ số, khởi tạo lottery slot mới để user có thể đặt, update kết quả xổ số cho user.
-  - Slot từ 0h->23 tương ứng 0h->23h,
-  - 
+  - Slot từ 0h->23 tương ứng 0h->23h.
+    
    
 
