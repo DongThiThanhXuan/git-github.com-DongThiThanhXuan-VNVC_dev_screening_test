@@ -2,7 +2,7 @@ I/ Project Viết bằng C# .NET Core 6.
   1/ Cấu trúc bài làm: 2 thư mục
   - Thư mục API là Server side
   - Thư mục DemoWinform là chạy client site bằng Winform application
-  2/ DB là SQLite đi kèm trong thư mục API
+  2/ DB là SQLite đi kèm trong thư mục API ( SQLite nhẹ và ko cần cài đặt).
 II/ Hướng dẫn cài đặt và chạy:
   - Tải project về, giải nén.
   - Tải Visual Studio 2022
