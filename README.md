@@ -22,10 +22,12 @@ III/ Công nghệ sử dụng
       - Fluent Validation
       - 
 IV/ Tính năng
-
+- Mỗi lượt xố số được xác định bởi ngày và slot thời gian. Slot có giá trị từ 0->23 tương ứng 0->23h.
     1/ Web API:
-  - Có Schedule function chạy tự động đầu mỗi giờ để tạo kết quả xổ số, khởi tạo lottery slot mới để user có thể đặt, update kết quả xổ số cho user.
-  - Slot từ 0h->23 tương ứng 0h->23h.
+  - Schedule function chạy tự động đầu mỗi giờ để:
+     - Tạo kết quả xổ số
+     - Khởi tạo lottery slot mới để user có thể đặt
+     - update kết quả xổ số cho user.
     
    
 
