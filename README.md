@@ -1,3 +1,5 @@
+Full dựng và demo app qua video 6 phút link https://drive.google.com/file/d/1D8e0TcrgnQ2PQng0iPWV_tE14lojZzIv/view
+
 I/ Công nghệ sử dụng
     Cả client và API đều được viết bằng C# .NET Core 6.
     
@@ -25,6 +27,7 @@ II/ Hướng dẫn cài đặt:
    
 III/ Tính năng
   - Mỗi lượt xố số được xác định bởi ngày và slot thời gian. Slot có giá trị từ 0->23 tương ứng 0->23h.
+  - Note: app không sử dụng nhiều đến service interface vì logic app không phức tạp, không nhiều dòng code. Khi App lớn sẽ tách bớt logic qua Service. Và do không đủ thời gian nên cũng không kịp làm phần Unit Test. Và khi làm unit test sẽ cần interface để test.
 
     1/ Web API:
      - Schedule function chạy tự động đầu mỗi giờ để:
@@ -37,6 +40,7 @@ III/ Tính năng
 
     2/ Winform:
      - Validate số điện thoại, fullname, pick number (số user chọn)
-   IV/ Video & Postman
+
+IV/ Tính năng
    Anh/chị vui lòng truy cập link sau để lấy postman và xem video demo https://drive.google.com/file/d/1D8e0TcrgnQ2PQng0iPWV_tE14lojZzIv/view
 
